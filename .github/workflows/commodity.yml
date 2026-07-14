@@ -1,0 +1,19 @@
+name: Commodities Tracker
+on:
+  schedule: [{cron: '0 6 * * *'}]
+  workflow_dispatch:
+permissions: {contents: write}
+jobs:
+  update-commodities:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with: {python-version: '3.10'}
+    - run: python commodity_tracker.py
+    - run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add README.md
+        git commit -m "Automated update: Commodity pricing refreshed" || exit 0
+        git push
