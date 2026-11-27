@@ -2,7 +2,7 @@
 
 **Macro-Economic Dashboard — Daytraa Business Solutions**
 
-*Last Automated Sync: 2026-11-26 16:37:22 IST*
+*Last Automated Sync: 2026-11-27 16:22:40 IST*
 
 | Commodity | Russian Origin | Indian Target Market | 30-Day Trend | Supply Status |
 | :--- | :--- | :--- | :--- | :--- |
